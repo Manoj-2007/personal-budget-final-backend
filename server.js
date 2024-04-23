@@ -49,6 +49,9 @@ app.use('/', loginRoutes);
 const budgetRoutes = require('./budgetRoutes');
 app.use('/', budgetRoutes);
 
+const expenseRoutes = require('./expenseRoutes');
+app.use('/', expenseRoutes);
+
 app.get('/', async (req, res) => {
         res.status(200).json({success : true, message : 'Everything is Good.'});
 });
