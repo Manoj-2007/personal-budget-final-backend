@@ -43,6 +43,8 @@ const closeMysqlConnection = () => {
     });
 };
 
+const loginRoutes = require('./authenticationRoutes');
+app.use('/', loginRoutes);
 
 app.get('/', async (req, res) => {
         res.status(200).json({success : true, message : 'Everything is Good.'});
